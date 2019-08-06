@@ -249,7 +249,7 @@ namespace DutchVACCATISGenerator.Forms
 #if DEBUG
             if ((DateTime.UtcNow - fetchMETARTime).Seconds > 10)
 #else
-            if ((DateTime.UtcNow - timerEnabled).Minutes > 29)
+            if ((DateTime.UtcNow - fetchMETARTime).Minutes > 29)
 #endif
             {
                 //Update METAR.
