@@ -46,6 +46,7 @@ Source: "Files\Dutch VACC - ATIS Generator.exe"; DestDir: "{app}"; Flags: ignore
 Source: "Files\NAudio.dll"; DestDir: "{app}"; Flags: ignoreversion uninsremovereadonly overwritereadonly; Attribs: readonly; Components: main\NAudio
 Source: "Files\NAudio.WindowsMediaFormat.dll"; DestDir: "{app}"; Flags: ignoreversion uninsremovereadonly overwritereadonly; Attribs: readonly; Components: main\NAudio_WindowsMediaFormat
 Source: "Files\Newtonsoft.Json.dll"; DestDir: "{app}"; Flags: ignoreversion uninsremovereadonly overwritereadonly; Attribs: readonly; Components: main\Newtonsoft_Json
+Source: "Files\SimpleInjector.dll"; DestDir: "{app}"; Flags: ignoreversion uninsremovereadonly overwritereadonly; Attribs: readonly; Components: main\SimpleInjector
 ; ALERT SOUND
 Source: "Files\alert.wav"; DestDir: "{app}/sounds"; Flags: ignoreversion; Components: main\alertsound
 ; ATIS MAIN FILES
@@ -208,6 +209,7 @@ Name: main\alertsound; Description: alert.wav; Types: full compact custom; Flags
 Name: main\NAudio; Description: NAudio.dll; Types: full compact custom; Flags: fixed
 Name: main\NAudio_WindowsMediaFormat; Description: NAudio.WindowsMediaFormat.dll; Types: full compact custom; Flags: fixed
 Name: main\Newtonsoft_Json; Description: Newtonsoft.Json.dll; Types: full compact custom; Flags: fixed
+Name: main\SimpleInjector; Description: SimpleInjector.dll; Types: full compact custom; Flags: fixed
 Name: sounds; Description: ATIS Sound Files; Types: full compact custom; Flags: fixed
 Name: sounds\Samples; Description: ATIS Samples; Types: full compact custom; Flags: fixed
 Name: manuals; Description: Manuals; Types: full compact custom; Flags: fixed

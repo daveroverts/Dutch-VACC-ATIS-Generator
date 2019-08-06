@@ -11,7 +11,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Dutch VACC")]
 [assembly: AssemblyProduct("Dutch VACC - ATIS Generator")]
-[assembly: AssemblyCopyright("Copyright © Dutch VACC 2015")]
+[assembly: AssemblyCopyright("Copyright © Dutch VACC 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -34,6 +34,6 @@ using System.Resources;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 //[assembly: AssemblyFileVersion("0.4.0.0")]
-[assembly: AssemblyVersion("2.0.0.1")]
+[assembly: AssemblyVersion("2.0.0.2")]
 [assembly: NeutralResourcesLanguageAttribute("en")]
-[assembly: AssemblyFileVersionAttribute("2.0.0.1")]
+[assembly: AssemblyFileVersion("2.0.0.2")]
