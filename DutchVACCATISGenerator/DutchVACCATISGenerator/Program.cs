@@ -1,7 +1,9 @@
 ﻿using DutchVACCATISGenerator.Extensions;
 using DutchVACCATISGenerator.Forms;
+using DutchVACCATISGenerator.Properties;
 using SimpleInjector;
 using System;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading;
 using System.Windows.Forms;
@@ -23,6 +25,9 @@ namespace DutchVACCATISGenerator
             container = container.Bootstrap();
 
             Application.ThreadException += new ThreadExceptionEventHandler(ThreadExceptionEventHandler);
+
+            if (Debugger.IsAttached)
+                Settings.Default.Reset();
 
             Application.Run(container.GetInstance<MainForm>());
         }

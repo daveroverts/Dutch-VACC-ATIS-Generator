@@ -120,6 +120,8 @@
             this.soundButton = new System.Windows.Forms.Button();
             this.fetchMETARTimer = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.selectAtisehamtxtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.atisIndexGroupBox.SuspendLayout();
             this.EHAMmainRunwaysGroupBox.SuspendLayout();
             this.EHAMmainLandingRunwayGroupBox.SuspendLayout();
@@ -827,7 +829,7 @@
             // amsterdamInfoToolStripMenuItem
             // 
             this.amsterdamInfoToolStripMenuItem.Name = "amsterdamInfoToolStripMenuItem";
-            this.amsterdamInfoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.amsterdamInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.amsterdamInfoToolStripMenuItem.Text = "Amsterdam Info";
             this.amsterdamInfoToolStripMenuItem.Click += new System.EventHandler(this.AmsterdamInfoToolStripMenuItem_Click);
             // 
@@ -842,13 +844,13 @@
             // seperatorDutchVACCToolStripMenuItem
             // 
             this.seperatorDutchVACCToolStripMenuItem.Name = "seperatorDutchVACCToolStripMenuItem";
-            this.seperatorDutchVACCToolStripMenuItem.Size = new System.Drawing.Size(157, 6);
+            this.seperatorDutchVACCToolStripMenuItem.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -863,7 +865,9 @@
             this.ehrdToolStripMenuItem,
             this.seperatorEHRDToolStripMenuItem,
             this.playSoundWhenMETARIsFetchedToolStripMenuItem,
-            this.randomLetterToolStripMenuItem});
+            this.randomLetterToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.selectAtisehamtxtToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.settingsToolStripMenuItem.Text = "Settings";
@@ -1090,6 +1094,18 @@
             // 
             this.openFileDialog.FileName = "openFileDialog";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(292, 6);
+            // 
+            // selectAtisehamtxtToolStripMenuItem
+            // 
+            this.selectAtisehamtxtToolStripMenuItem.Name = "selectAtisehamtxtToolStripMenuItem";
+            this.selectAtisehamtxtToolStripMenuItem.Size = new System.Drawing.Size(295, 22);
+            this.selectAtisehamtxtToolStripMenuItem.Text = "Select atiseham.txt";
+            this.selectAtisehamtxtToolStripMenuItem.Click += new System.EventHandler(this.SelectAtisehamtxtToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1252,6 +1268,8 @@
         private System.Windows.Forms.ToolStripSeparator seperatorAutoProcessToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator seperatorEHRDToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem selectAtisehamtxtToolStripMenuItem;
     }
 }
 

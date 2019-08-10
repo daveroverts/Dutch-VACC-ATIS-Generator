@@ -77,6 +77,12 @@ namespace DutchVACCATISGenerator.Forms
             //If auto load EHAM runways is selected.
             if (autoLoadEHAMRunwayToolStripMenuItem.Checked)
                 runwayLogic.SchipholRunways();
+
+            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.atisfile))
+            {
+                Properties.Settings.Default.atisfile = $@"{Environment.GetFolderPath(Environment.SpecialFolder.Personal)}\EuroScope\atis\atiseham.txt";
+                Properties.Settings.Default.Save();
+            }
         }
 
         #region UI events
@@ -150,18 +156,7 @@ namespace DutchVACCATISGenerator.Forms
             {
                 MessageBox.Show("No path to atiseham.txt provided.", "Warning");
 
-                //Open file dialog for user to set the path to atiseham.txt.
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    //Set properties.
-                    Properties.Settings.Default.atisfile = openFileDialog.FileName;
-
-                    //Save setting.
-                    Properties.Settings.Default.Save();
-                }
-                //User didn't selected a file.
-                else
-                    return;
+                SelectATISehamtxt();
             }
 
             //Build ATIS file.
@@ -176,6 +171,15 @@ namespace DutchVACCATISGenerator.Forms
                 generateATISButton.Enabled = true;
 
                 MessageBox.Show($"Unable to build ATIS.\n\nError: {ex.Message}", "Error");
+            }
+        }
+
+        private void SelectATISehamtxt()
+        {
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                Properties.Settings.Default.atisfile = openFileDialog.FileName;
+                Properties.Settings.Default.Save();
             }
         }
 
@@ -1080,6 +1084,11 @@ namespace DutchVACCATISGenerator.Forms
         private void SetWindowBounds()
         {
             applicationVariables.MainFormBounds = this.Bounds;
+        }
+
+        private void SelectAtisehamtxtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SelectATISehamtxt();
         }
     }
 }
