@@ -181,9 +181,7 @@ namespace DutchVACCATISGenerator.Logic
                 applicationVariables.ATISIndex = new Random().Next(0, applicationVariables.PhoneticAlphabet.Count - 1);
             }
 
-            //If the current index is higher than the phonetic alphabet count (will cause exception!).
-            if (applicationVariables.ATISIndex > applicationVariables.PhoneticAlphabet.Count)
-                applicationVariables.ATISIndex = 0;
+            applicationVariables.ATISIndex %= applicationVariables.PhoneticAlphabet.Count;
         }
 
         /// <summary>

@@ -336,6 +336,12 @@ namespace DutchVACCATISGenerator.Forms
                 return;
             }
 
+            if (lastLabel.Text != string.Empty)
+            {
+                applicationVariables.ATISIndex++;
+                applicationVariables.ATISIndex %= applicationVariables.PhoneticAlphabet.Count;
+            }
+
             //Clear output and METAR text box.
             outputTextBox.Clear();
             METARTextBox.Clear();
