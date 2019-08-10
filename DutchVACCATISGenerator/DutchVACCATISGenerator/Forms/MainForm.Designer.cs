@@ -735,9 +735,7 @@
             this.EeldeRunwayComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EeldeRunwayComboBox.FormattingEnabled = true;
             this.EeldeRunwayComboBox.Items.AddRange(new object[] {
-            "01",
             "05",
-            "19",
             "23"});
             this.EeldeRunwayComboBox.Location = new System.Drawing.Point(6, 36);
             this.EeldeRunwayComboBox.Name = "EeldeRunwayComboBox";

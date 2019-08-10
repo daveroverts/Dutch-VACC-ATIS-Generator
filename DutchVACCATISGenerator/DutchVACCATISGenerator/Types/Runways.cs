@@ -24,9 +24,7 @@ namespace DutchVACCATISGenerator.Types
         //Tuple<RunwayHeading, OpositeRunwayHeading, Preference>
         public static Dictionary<string, Tuple<int, int, string>> Eelde = new Dictionary<string, Tuple<int, int, string>>()
         {
-            {"01", new Tuple<int, int, string>(008, 214, "4")},
             {"05", new Tuple<int, int, string>(051, 231, "2")},
-            {"19", new Tuple<int, int, string>(188, 008, "3")},
             {"23", new Tuple<int, int, string>(231, 051, "1")},
         };
 
