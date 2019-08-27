@@ -119,12 +119,6 @@
     <Compile Include="Forms\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AutoUpdateForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\AutoUpdateForm.Designer.cs">
-      <DependentUpon>AutoUpdateForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,13 +129,11 @@
     <Compile Include="Logic\FileLogic.cs" />
     <Compile Include="Logic\METARLogic.cs" />
     <Compile Include="Logic\RunwayLogic.cs" />
-    <Compile Include="Logic\VersionLogic.cs" />
     <Compile Include="Types\EventsArgs.cs" />
     <Compile Include="Types\Runways.cs" />
     <Compile Include="Types\SchipholPlanningInterface.cs" />
     <Compile Include="Utilities\FlashingWindow.cs" />
     <Compile Include="Helpers\FormOpenerHelper.cs" />
-    <Compile Include="Logic\AutoUpdateLogic.cs" />
     <Compile Include="Logic\SoundLogic.cs" />
     <Compile Include="Logic\TerminalAerodromeForecastLogic.cs" />
     <Compile Include="Types\METAR\Trend.cs" />
@@ -174,9 +166,6 @@
     <Compile Include="Utilities\NativeMethods.cs" />
     <EmbeddedResource Include="Forms\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AutoUpdateForm.resx">
-      <DependentUpon>AutoUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

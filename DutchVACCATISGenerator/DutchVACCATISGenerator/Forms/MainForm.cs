@@ -34,8 +34,7 @@ namespace DutchVACCATISGenerator.Forms
             IFormOpenerHelper formOpenerHelper,
             IMETARLogic METARLogic,
             IRunwayLogic runwayLogic,
-            ISoundLogic soundLogic,
-            IVersionLogic versionLogic)
+            ISoundLogic soundLogic)
         {
             this.ATISLogic = ATISLogic;
             this.applicationVariables = applicationVariables;
@@ -53,7 +52,6 @@ namespace DutchVACCATISGenerator.Forms
             ApplicationEvents.BuildAITSCompletedEvent += BuildAITSCompleted;
             ApplicationEvents.BuildAITSStartedEvent += BuildAITSStarted;
             ApplicationEvents.METARDownloadedEvent += METARDownloaded;
-            ApplicationEvents.NewVersionEvent += NewVersion;
             ApplicationEvents.PlaybackStartedEvent += PlaybackStarted;
             ApplicationEvents.PlaybackStoppedEvent += PlaybackStopped;
             ApplicationEvents.SchipholRunwaysEvent += SchipholRunways;
@@ -64,9 +62,6 @@ namespace DutchVACCATISGenerator.Forms
 
             //Set ATIS index and label.
             RandomizeATISLetter(true);
-
-            //Check for new version.
-            versionLogic.NewVersion();
 
             //Load EHAM METAR.
             DownloadMETAR();
@@ -692,17 +687,6 @@ namespace DutchVACCATISGenerator.Forms
                 //Re-enable the get METAR button.
                 getMetarButton.Enabled = true;
             }));
-        }
-
-        private void NewVersion(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Newer version is available.\nDownload latest version?",
-                "Message",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Asterisk) == DialogResult.Yes)
-            {
-                formOpenerHelper.ShowModalForm<AutoUpdaterForm>();
-            }
         }
 
         private void PlaybackStarted(object sender, EventArgs e)
