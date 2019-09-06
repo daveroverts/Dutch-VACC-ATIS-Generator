@@ -3,7 +3,6 @@ using DutchVACCATISGenerator.Logic;
 using DutchVACCATISGenerator.Types;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Windows.Forms;
@@ -31,13 +30,6 @@ namespace DutchVACCATISGenerator.Forms
 
             //Set runway friction combo box selection to first item.
             frictionComboBox.SelectedIndex = applicationVariables.FrictionIndex;
-            FormClosing += RunwayForm_FormClosing;
-        }
-
-        private void RunwayForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Visible = false;
-            e.Cancel = true;
         }
 
         #region UI events
@@ -154,7 +146,7 @@ namespace DutchVACCATISGenerator.Forms
 
             schipholDepartureDataGridView.Rows.Clear();
 
-            foreach (var pair in Runways.SchipholDeparture)
+            foreach (var pair in Runways.SchipholLanding)
                 schipholDepartureDataGridView.Rows.Add(GetDataRow(schipholDepartureDataGridView, pair));
 
             AddToolTip();

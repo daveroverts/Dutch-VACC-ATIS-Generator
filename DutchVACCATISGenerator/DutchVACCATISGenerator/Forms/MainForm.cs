@@ -24,7 +24,6 @@ namespace DutchVACCATISGenerator.Forms
         private readonly IMETARLogic METARLogic;
         private readonly IRunwayLogic runwayLogic;
         private readonly ISoundLogic soundLogic;
-        private RunwayForm runwayForm;
 
         private bool ATISPlaying;
         private DateTime fetchMETARTime;
@@ -100,7 +99,7 @@ namespace DutchVACCATISGenerator.Forms
             //If form is restored to normal window state.
             if (WindowState == FormWindowState.Normal)
             {
-                runwayForm?.Show();
+                formOpenerHelper.Show<RunwayForm>();
                 formOpenerHelper.Show<SoundForm>();
 
                 this.Show();
@@ -109,7 +108,7 @@ namespace DutchVACCATISGenerator.Forms
             //If form is minimized.
             if (WindowState == FormWindowState.Minimized)
             {
-                runwayForm?.Hide();
+                formOpenerHelper.Hide<RunwayForm>();
                 formOpenerHelper.Hide<SoundForm>();
             }
         }
@@ -1040,23 +1039,20 @@ namespace DutchVACCATISGenerator.Forms
         /// </summary>
         private void SetControlsForRunwayInfoForm()
         {
-            if (runwayForm != null && runwayForm.Visible)
+            if (formOpenerHelper.IsOpen<RunwayForm>())
             {
-                runwayForm.Hide();
+                formOpenerHelper.CloseForm<RunwayForm>();
+
                 runwayInfoButton.Text = ">";
             }
             else
             {
-                if (runwayForm == null)
-                {
-                    runwayForm = new RunwayForm(applicationVariables, runwayLogic);
-                }
-                runwayForm.Show();
+                formOpenerHelper.ShowModelessForm<RunwayForm>();
 
                 runwayInfoButton.Text = "<";
             }
 
-            runwayInfoToolStripMenuItem.BackColor = runwayForm.Visible ? SystemColors.GradientActiveCaption : SystemColors.Control;
+            runwayInfoToolStripMenuItem.BackColor = formOpenerHelper.IsOpen<RunwayForm>() ? SystemColors.GradientActiveCaption : SystemColors.Control;
         }
 
         /// <summary>
