@@ -66,7 +66,7 @@ Source: "Files\Samples\eham1_6.wav"; DestDir: "{userdocs}\EuroScope\atis\samples
 Source: "Files\Samples\eham1_7.wav"; DestDir: "{userdocs}\EuroScope\atis\samples"; Flags: ignoreversion; Components: sounds\Samples
 Source: "Files\Samples\eham1_8.wav"; DestDir: "{userdocs}\EuroScope\atis\samples"; Flags: ignoreversion; Components: sounds\Samples
 Source: "Files\Samples\eham1_9.wav"; DestDir: "{userdocs}\EuroScope\atis\samples"; Flags: ignoreversion; Components: sounds\Samples
-Source: "Files\Samples\eham1_9er.wav"; DestDir: "{userdocs}\EuroScope\atis\samples"; Flags: ignoreversion; Components: sounds\Samples
+Source: "Files\Samples\eham1_9_flat.wav"; DestDir: "{userdocs}\EuroScope\atis\samples"; Flags: ignoreversion; Components: sounds\Samples
 Source: "Files\Samples\eham1_a.wav"; DestDir: "{userdocs}\EuroScope\atis\samples"; Flags: ignoreversion; Components: sounds\Samples
 Source: "Files\Samples\eham1_and.wav"; DestDir: "{userdocs}\EuroScope\atis\samples"; Flags: ignoreversion; Components: sounds\Samples
 Source: "Files\Samples\eham1_b.wav"; DestDir: "{userdocs}\EuroScope\atis\samples"; Flags: ignoreversion; Components: sounds\Samples
@@ -233,7 +233,7 @@ Type: files; Name: "{userdocs}\EuroScope\atis\eham1_6.wav"
 Type: files; Name: "{userdocs}\EuroScope\atis\eham1_7.wav"
 Type: files; Name: "{userdocs}\EuroScope\atis\eham1_8.wav"
 Type: files; Name: "{userdocs}\EuroScope\atis\eham1_9.wav"
-Type: files; Name: "{userdocs}\EuroScope\atis\eham1_9er.wav"
+Type: files; Name: "{userdocs}\EuroScope\atis\eham1_9_flat.wav"
 Type: files; Name: "{userdocs}\EuroScope\atis\eham1_a.wav"
 Type: files; Name: "{userdocs}\EuroScope\atis\eham1_and.wav"
 Type: files; Name: "{userdocs}\EuroScope\atis\eham1_b.wav"

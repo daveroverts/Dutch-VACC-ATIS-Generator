@@ -11,7 +11,7 @@ RECORD:6:eham1_6.wav
 RECORD:7:eham1_7.wav
 RECORD:8:eham1_8.wav
 RECORD:9:eham1_9.wav
-RECORD:9er:eham1_9er.wav
+RECORD:9er:eham1_9_flat.wav
 RECORD:a:eham1_a.wav
 RECORD:and:eham1_and.wav
 RECORD:b:eham1_b.wav
