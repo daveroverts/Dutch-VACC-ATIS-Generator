@@ -1060,7 +1060,7 @@ namespace DutchVACCATISGenerator.Logic
             else if (NSW)
             {
                 applicationVariables.ATISSamples.Add("nsw");
-                return " NO SIGNIFICANT CLOUDS";
+                return " NO SIGNIFICANT WEATHER";
             }
             else
             {
