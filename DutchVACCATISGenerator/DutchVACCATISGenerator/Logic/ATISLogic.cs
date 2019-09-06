@@ -658,12 +658,12 @@ namespace DutchVACCATISGenerator.Logic
         {
             var output = string.Empty;
 
-            applicationVariables.ATISSamples.Add("wind");
-            output += " WIND";
-
             //If wind is calm.
             if (wind.Variable)
             {
+                applicationVariables.ATISSamples.Add("wind");
+                output += " WIND";
+
                 applicationVariables.ATISSamples.Add("vrb");
 
                 AddIndividualDigits(wind.Knots.ToString());
