@@ -228,6 +228,7 @@ namespace DutchVACCATISGenerator.Forms
             {
                 //Set text of get select best runway button.
                 selectBestRunwayButton.Text = "Select best runway";
+                selectBestRunwayButton.Enabled = applicationVariables.METAR != null;
 
                 if (applicationVariables.METAR != null)
                     //If selected ICAO equals the ICAO of the last processed METAR, enable the get select best runway button.
