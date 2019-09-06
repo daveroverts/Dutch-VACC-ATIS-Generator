@@ -24,6 +24,7 @@ namespace DutchVACCATISGenerator.Forms
         private readonly IMETARLogic METARLogic;
         private readonly IRunwayLogic runwayLogic;
         private readonly ISoundLogic soundLogic;
+        private RunwayForm runwayForm;
 
         private bool ATISPlaying;
         private DateTime fetchMETARTime;
@@ -99,7 +100,7 @@ namespace DutchVACCATISGenerator.Forms
             //If form is restored to normal window state.
             if (WindowState == FormWindowState.Normal)
             {
-                formOpenerHelper.Show<RunwayForm>();
+                runwayForm?.Show();
                 formOpenerHelper.Show<SoundForm>();
 
                 this.Show();
@@ -108,7 +109,7 @@ namespace DutchVACCATISGenerator.Forms
             //If form is minimized.
             if (WindowState == FormWindowState.Minimized)
             {
-                formOpenerHelper.Hide<RunwayForm>();
+                runwayForm?.Hide();
                 formOpenerHelper.Hide<SoundForm>();
             }
         }
@@ -1039,20 +1040,23 @@ namespace DutchVACCATISGenerator.Forms
         /// </summary>
         private void SetControlsForRunwayInfoForm()
         {
-            if (formOpenerHelper.IsOpen<RunwayForm>())
+            if (runwayForm != null && runwayForm.Visible)
             {
-                formOpenerHelper.CloseForm<RunwayForm>();
-
+                runwayForm.Hide();
                 runwayInfoButton.Text = ">";
             }
             else
             {
-                formOpenerHelper.ShowModelessForm<RunwayForm>();
+                if (runwayForm == null)
+                {
+                    runwayForm = new RunwayForm(applicationVariables, runwayLogic);
+                }
+                runwayForm.Show();
 
                 runwayInfoButton.Text = "<";
             }
 
-            runwayInfoToolStripMenuItem.BackColor = formOpenerHelper.IsOpen<RunwayForm>() ? SystemColors.GradientActiveCaption : SystemColors.Control;
+            runwayInfoToolStripMenuItem.BackColor = runwayForm.Visible ? SystemColors.GradientActiveCaption : SystemColors.Control;
         }
 
         /// <summary>
