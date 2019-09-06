@@ -25,7 +25,6 @@ namespace DutchVACCATISGenerator.Forms
             //Register application events.
             ApplicationEvents.MainFormMovedEvent += MainFormMoved;
             ApplicationEvents.METARProcessedEvent += METARProcessed;
-            this.Disposed += RunwayForm_Disposed;
 
             SetVisibleDataGrid(this.applicationVariables.SelectedAirport);
 
@@ -33,10 +32,18 @@ namespace DutchVACCATISGenerator.Forms
             frictionComboBox.SelectedIndex = applicationVariables.FrictionIndex;
         }
 
-        private void RunwayForm_Disposed(object sender, EventArgs e)
+        protected override void Dispose(bool disposing)
         {
-            ApplicationEvents.MainFormMovedEvent -= MainFormMoved;
-            ApplicationEvents.METARProcessedEvent -= METARProcessed;
+            if (disposing)
+            {
+                if (components != null)
+                {
+                    components.Dispose();
+                }
+                ApplicationEvents.MainFormMovedEvent -= MainFormMoved;
+                ApplicationEvents.METARProcessedEvent -= METARProcessed;
+            }
+            base.Dispose(disposing);
         }
 
         #region UI events
@@ -240,13 +247,13 @@ namespace DutchVACCATISGenerator.Forms
             row.Cells[2].Value = tailwindComponent * -1; //Q&D
             row.Cells[3].Value = runway.Value.Item3;
             row.Cells[4].Value = runway.Value.Item4;
-            row.Cells[5].Value = runwayLogic.RunwayComplies(applicationVariables.FrictionIndex, 
-                runway.Key, 
+            row.Cells[5].Value = runwayLogic.RunwayComplies(applicationVariables.FrictionIndex,
+                runway.Key,
                 applicationVariables.METAR.RVR,
                 applicationVariables.METAR.RVRValues,
                 applicationVariables.METAR.Visibility,
                 applicationVariables.METAR.Clouds,
-                crosswindComponent, 
+                crosswindComponent,
                 tailwindComponent);
 
             return row;
