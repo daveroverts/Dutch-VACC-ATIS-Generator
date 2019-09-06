@@ -25,11 +25,18 @@ namespace DutchVACCATISGenerator.Forms
             //Register application events.
             ApplicationEvents.MainFormMovedEvent += MainFormMoved;
             ApplicationEvents.METARProcessedEvent += METARProcessed;
+            this.Disposed += RunwayForm_Disposed;
 
             SetVisibleDataGrid(this.applicationVariables.SelectedAirport);
 
             //Set runway friction combo box selection to first item.
             frictionComboBox.SelectedIndex = applicationVariables.FrictionIndex;
+        }
+
+        private void RunwayForm_Disposed(object sender, EventArgs e)
+        {
+            ApplicationEvents.MainFormMovedEvent -= MainFormMoved;
+            ApplicationEvents.METARProcessedEvent -= METARProcessed;
         }
 
         #region UI events
@@ -146,7 +153,7 @@ namespace DutchVACCATISGenerator.Forms
 
             schipholDepartureDataGridView.Rows.Clear();
 
-            foreach (var pair in Runways.SchipholLanding)
+            foreach (var pair in Runways.SchipholDeparture)
                 schipholDepartureDataGridView.Rows.Add(GetDataRow(schipholDepartureDataGridView, pair));
 
             AddToolTip();
