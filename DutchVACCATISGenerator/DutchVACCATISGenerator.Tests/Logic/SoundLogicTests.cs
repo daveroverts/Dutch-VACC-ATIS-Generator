@@ -11,7 +11,7 @@ namespace DutchVACCATISGenerator.Test.Logic
     [TestClass]
     public class SoundLogicTests
     {
-        private const string ATISEHAM = @"C:\Users\Virtual\Documents\EuroScope\atis\atiseham.txt";
+        private const string ATISEHAM = @"E:\UserFolders\Documenten\EuroScope\atis\atiseham.txt";
 
         private readonly ApplicationVariables applicationVariables;
         private readonly IATISLogic ATISLogic;
