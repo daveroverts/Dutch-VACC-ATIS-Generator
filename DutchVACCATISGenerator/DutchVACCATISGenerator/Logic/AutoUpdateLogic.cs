@@ -54,11 +54,11 @@ namespace DutchVACCATISGenerator.Logic
                 zipName = GetZipName();
 
                 //Download the zip file.
-                await webClient.DownloadFileTaskAsync(new Uri("http://daanbroekhuizen.com/Dutch VACC/Dutch VACC ATIS Generator/" + zipName), executablePath + zipName);
+                await webClient.DownloadFileTaskAsync(new Uri(ApplicationVariables.UpdateBaseURL + zipName), executablePath + zipName);
             }
             catch
             {
-                //Do nothing, ignore error.
+                Application.Exit();
             }
         }
 
@@ -66,9 +66,9 @@ namespace DutchVACCATISGenerator.Logic
         {
             //Request zip file name.
 #if DEBUG
-            var request = WebRequest.Create("http://daanbroekhuizen.com/Dutch VACC/Dutch VACC ATIS Generator/Version/filename2.php");
+            var request = WebRequest.Create($"{ApplicationVariables.UpdateBaseURL}versionFileTest.txt");
 #else
-            var request = WebRequest.Create("http://daanbroekhuizen.com/Dutch VACC/Dutch VACC ATIS Generator/Version/filename.php");
+            var request = WebRequest.Create($"{ApplicationVariables.UpdateBaseURL}versionFile.txt");
 #endif
             var response = request.GetResponse();
 

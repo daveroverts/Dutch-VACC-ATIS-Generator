@@ -19,10 +19,6 @@ namespace DutchVACCATISGenerator.Forms
             try
             {
                 autoUpdateLogic.AutoUpdate();
-
-                //If anything fail during the auto update call, the error will not bubble to the form.
-                //Therfore this line should only be called if an error occurs to exit the program.
-                Application.Exit();
             }
             catch
             {
@@ -32,7 +28,10 @@ namespace DutchVACCATISGenerator.Forms
 
         private void DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            this.Invoke(new Action(() => progressBar.Value = e.ProgressPercentage));
+            if (progressBar.InvokeRequired)
+                progressBar.Invoke(new Action(() => progressBar.Value = e.ProgressPercentage));
+            else
+                progressBar.Value = e.ProgressPercentage;
         }
     }
 }

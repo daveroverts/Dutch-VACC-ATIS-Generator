@@ -7,6 +7,8 @@ namespace DutchVACCATISGenerator.Types
     [ExcludeFromCodeCoverage]
     public class ApplicationVariables
     {
+        public const string UpdateBaseURL = @"https://cdn.dutchvacc.nl/atis/";
+
         public int ATISIndex { get; set; }
         public List<string> ATISSamples { get; set; }
         public int FrictionIndex { get; set; }

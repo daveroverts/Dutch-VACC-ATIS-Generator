@@ -15,7 +15,6 @@ namespace DutchVACCATISGenerator.Logic
 
     public class VersionLogic : IVersionLogic
     {
-        private const string baseURL = "http://daanbroekhuizen.com";
 
         public async Task NewVersion()
         {
@@ -45,9 +44,9 @@ namespace DutchVACCATISGenerator.Logic
         {
             //Request latest version.
 #if DEBUG
-            var request = WebRequest.Create($"{baseURL}/Dutch VACC/Dutch VACC ATIS Generator/Version/version2.php");
+            var request = WebRequest.Create($"{ApplicationVariables.UpdateBaseURL}versionTest.txt");
 #else
-                var request = WebRequest.Create($"{baseURL}/Dutch VACC/Dutch VACC ATIS Generator/Version/version.php");
+                var request = WebRequest.Create($"{ApplicationVariables.UpdateBaseURL}version.txt");
 #endif
             var response = await request.GetResponseAsync();
 
