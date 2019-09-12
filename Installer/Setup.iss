@@ -28,7 +28,6 @@ Compression=lzma
 SolidCompression=true
 EnableDirDoesntExistWarning=true
 AlwaysUsePersonalGroup=true
-PrivilegesRequired=admin
 
 [Languages]
 Name: english; MessagesFile: compiler:Default.isl

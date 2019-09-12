@@ -25,7 +25,7 @@ namespace DutchVACCATISGenerator.Logic
     {
         private readonly IFileLogic fileLogic;
 
-        private string executablePath;
+        private readonly string installerPath = Path.GetTempPath();
         private string zipName;
 
         public AutoUpdateLogic(IFileLogic fileLogic)
@@ -36,7 +36,7 @@ namespace DutchVACCATISGenerator.Logic
         public async Task AutoUpdate()
         {
             //Set path of executable.
-            executablePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\";
+            //executablePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\";
 
             //Start downloading latest version.
             await DownloadLatestVersion();
@@ -54,7 +54,7 @@ namespace DutchVACCATISGenerator.Logic
                 zipName = GetZipName();
 
                 //Download the zip file.
-                await webClient.DownloadFileTaskAsync(new Uri(ApplicationVariables.UpdateBaseURL + zipName), executablePath + zipName);
+                await webClient.DownloadFileTaskAsync(new Uri(ApplicationVariables.UpdateBaseURL + zipName), installerPath + zipName);
             }
             catch
             {
@@ -84,28 +84,21 @@ namespace DutchVACCATISGenerator.Logic
                 fileLogic.DeleteInstallerFiles(false);
 
                 //Extract zip.
-                using (var zipFile = ZipFile.Open(executablePath + zipName, ZipArchiveMode.Read))
+                using (var zipFile = ZipFile.Open(installerPath + zipName, ZipArchiveMode.Read))
                 {
-                    zipFile.ExtractToDirectory($"{executablePath}temp", true);
+                    zipFile.ExtractToDirectory($"{installerPath}", true);
                 }
 
-                //Set temp folder to be hidden.
-                DirectoryInfo directoryInfo = Directory.CreateDirectory(executablePath + @"\temp");
-                directoryInfo.Attributes = FileAttributes.Directory | FileAttributes.Hidden | FileAttributes.ReadOnly;
-
                 //Delete zip.
-                File.Delete(executablePath + zipName);
+                File.Delete(installerPath + zipName);
 
                 //Start setup.
                 if (!UnitTestHelper.Detect_IsUnitTestRunning())
-                    Process.Start(executablePath + @"\temp\" + "Dutch VACC ATIS Generator - Setup.exe");
-
-                //Exit program to run setup.
-                Application.Exit();
+                    Process.Start(Path.Combine(installerPath, @"Dutch VACC ATIS Generator - Setup.exe"));
             }
-            catch
+            finally
             {
-                //Do nothing, ignore error.
+                Application.Exit();
             }
         }
     }
