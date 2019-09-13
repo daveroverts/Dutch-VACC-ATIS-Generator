@@ -10,36 +10,31 @@ namespace DutchVACCATISGenerator.Logic
         /// Deletes the installer files.
         /// </summary>
         /// <param name="removeZips">Remove downloaded zips</param>
-        void DeleteInstallerFiles(bool removeZips);
+        void DeleteOldInstallerFiles();
     }
 
     public class FileLogic : IFileLogic
     {
-        public void DeleteInstallerFiles(bool removeZips)
-        {
-            if (removeZips)
-            {
-                //Clean up zips.
-                var zips = Directory.GetFiles(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "*.zip");
+        public static readonly string InstallerPath = Path.Combine(Path.GetTempPath(), "DutchVACCATISGenerator");
+        public const string InstallerName = @"Dutch VACC ATIS Generator - Setup.exe";
 
+        public static string FullInstallerPathAndName => Path.Combine(InstallerPath, InstallerName);
+
+        public void DeleteOldInstallerFiles()
+        {
+            if (Directory.Exists(InstallerPath))
+            {
+                var zips = Directory.GetFiles(InstallerPath, "*.zip");
                 foreach (var zip in zips)
                 {
                     if (!(new FileInfo(zip).IsLocked()))
                         File.Delete(zip);
                 }
-            }
 
-            //Clean up temp folder.
-            var tempFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\temp";
-
-            //Delete temp folder if exists.
-            if (Directory.Exists(tempFolder))
-            {
-                //Remove hidden attribute.
-                DirectoryInfo directoryInfo = Directory.CreateDirectory(tempFolder);
-                directoryInfo.Attributes &= ~FileAttributes.ReadOnly;
-
-                Directory.Delete(tempFolder, true);
+                if (File.Exists(FullInstallerPathAndName))
+                {
+                    File.Delete(FullInstallerPathAndName);
+                }
             }
         }
     }

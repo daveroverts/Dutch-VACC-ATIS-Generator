@@ -24,8 +24,6 @@ namespace DutchVACCATISGenerator.Logic
     public class AutoUpdateLogic : IAutoUpdateLogic
     {
         private readonly IFileLogic fileLogic;
-
-        private readonly string installerPath = Path.GetTempPath();
         private string zipName;
 
         public AutoUpdateLogic(IFileLogic fileLogic)
@@ -35,10 +33,6 @@ namespace DutchVACCATISGenerator.Logic
 
         public async Task AutoUpdate()
         {
-            //Set path of executable.
-            //executablePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\";
-
-            //Start downloading latest version.
             await DownloadLatestVersion();
         }
 
@@ -54,7 +48,7 @@ namespace DutchVACCATISGenerator.Logic
                 zipName = GetZipName();
 
                 //Download the zip file.
-                await webClient.DownloadFileTaskAsync(new Uri(ApplicationVariables.UpdateBaseURL + zipName), installerPath + zipName);
+                await webClient.DownloadFileTaskAsync(new Uri(ApplicationVariables.UpdateBaseURL + zipName), FileLogic.InstallerPath + zipName);
             }
             catch
             {
@@ -80,21 +74,18 @@ namespace DutchVACCATISGenerator.Logic
         {
             try
             {
-                //Delete installer files.
-                fileLogic.DeleteInstallerFiles(false);
-
                 //Extract zip.
-                using (var zipFile = ZipFile.Open(installerPath + zipName, ZipArchiveMode.Read))
+                using (var zipFile = ZipFile.Open(FileLogic.InstallerPath + zipName, ZipArchiveMode.Read))
                 {
-                    zipFile.ExtractToDirectory($"{installerPath}", true);
+                    zipFile.ExtractToDirectory($"{FileLogic.InstallerPath}", true);
                 }
 
                 //Delete zip.
-                File.Delete(installerPath + zipName);
+                File.Delete(FileLogic.InstallerPath + zipName);
 
                 //Start setup.
                 if (!UnitTestHelper.Detect_IsUnitTestRunning())
-                    Process.Start(Path.Combine(installerPath, @"Dutch VACC ATIS Generator - Setup.exe"));
+                    Process.Start(FileLogic.FullInstallerPathAndName);
             }
             finally
             {

@@ -14,7 +14,7 @@ namespace DutchVACCATISGenerator.Test.Logic
 
         public FileLogicTests()
         {
-            executablePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\";
+            executablePath = FileLogic.InstallerPath;
             fileLogic = new FileLogic();
         }
 
@@ -22,24 +22,33 @@ namespace DutchVACCATISGenerator.Test.Logic
         public void Initialize()
         {
             //Arrange
-            Directory.CreateDirectory($@"{executablePath}temp");
-            using (var stream = File.Create($@"{executablePath}temp\test.txt"))
+            Directory.CreateDirectory(executablePath);
+            Directory.CreateDirectory(Path.Combine(executablePath, "test"));
+            using (var stream = File.Create(Path.Combine(executablePath, "test/test.txt")))
             {
                 stream.Close();
             }
 
-            ZipFile.CreateFromDirectory($@"{executablePath}temp", $@"{executablePath}ziptest.zip");
+            if (!File.Exists(Path.Combine(executablePath, "ziptest.zip")))
+            {
+                ZipFile.CreateFromDirectory(executablePath + "/test", Path.Combine(executablePath, "ziptest.zip"));
+            }
+            if (!File.Exists(FileLogic.FullInstallerPathAndName))
+            {
+                var f = File.Create(FileLogic.FullInstallerPathAndName);
+                f.Close();
+            }
         }
 
         [TestMethod]
         public void DeleteInstallerFiles_DeletesFiles_AreDeleted()
         {
             //Act
-            fileLogic.DeleteInstallerFiles(true);
+            fileLogic.DeleteOldInstallerFiles();
 
             //Assert
-            Assert.IsFalse(File.Exists($@"{executablePath}ziptest.zip"));
-            Assert.IsFalse(Directory.Exists($@"{executablePath}temp"));
+            Assert.IsFalse(File.Exists(Path.Combine(executablePath, "ziptest.zip")));
+            Assert.IsFalse(File.Exists(FileLogic.FullInstallerPathAndName));
         }
     }
 }

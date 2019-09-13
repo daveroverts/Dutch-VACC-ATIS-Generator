@@ -72,7 +72,7 @@ namespace DutchVACCATISGenerator.Forms
             DownloadMETAR();
 
             //Delete installer files.
-            fileLogic.DeleteInstallerFiles(true);
+            fileLogic.DeleteOldInstallerFiles();
 
             //If auto load EHAM runways is selected.
             if (autoLoadEHAMRunwayToolStripMenuItem.Checked)

@@ -1,4 +1,5 @@
 ﻿using DutchVACCATISGenerator.Extensions;
+using DutchVACCATISGenerator.Logic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using System.IO.Compression;
@@ -13,7 +14,7 @@ namespace DutchVACCATISGenerator.Test.Extensions
 
         public ZipArchiveExtensionsTests()
         {
-            executablePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\";
+            executablePath = FileLogic.InstallerPath + "/";
         }
        
         [TestInitialize]
