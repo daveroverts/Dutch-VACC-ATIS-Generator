@@ -9,3 +9,5 @@ TestResults/
 *.suo
 *.pdf
 *.zip
+*.msi
+*.exe

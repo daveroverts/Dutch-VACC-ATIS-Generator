@@ -16,7 +16,7 @@ namespace DutchVACCATISGenerator.Logic
     public class FileLogic : IFileLogic
     {
         public static readonly string InstallerPath = Path.Combine(Path.GetTempPath(), "DutchVACCATISGenerator");
-        public const string InstallerName = @"Dutch VACC ATIS Generator - Setup.exe";
+        public const string InstallerName = @"Dutch VACC ATIS Generator - Setup.msi";
 
         public static string FullInstallerPathAndName => Path.Combine(InstallerPath, InstallerName);
 
