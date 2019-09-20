@@ -291,12 +291,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_4165CB5F2255474BB625107A4816559F"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_428324E5402E4ED697B88FE1BEB80EFA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1042,7 +1036,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:v4.6.1 "
+                "FrameworkVersion" = "8:v4.6.1  "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=671728"
                 }
@@ -1956,26 +1950,6 @@
             "TargetName" = "8:eham1_degrees.wav"
             "Tag" = "8:"
             "Folder" = "8:_F1D7A62CA65E4AE2A624B9F120396649"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4165CB5F2255474BB625107A4816559F"
-            {
-            "SourcePath" = "8:..\\..\\Installer\\Files\\atis.wav"
-            "TargetName" = "8:atis.wav"
-            "Tag" = "8:"
-            "Folder" = "8:_B867204838F94E248FDCE988E5C1C254"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4746,7 +4720,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E3B6109CFAA0430DB16E477A892CED91"
             {
-            "SourcePath" = "8:..\\DutchVACCATISGenerator\\obj\\Release\\Dutch VACC - ATIS Generator.exe"
+            "SourcePath" = "8:..\\DutchVACCATISGenerator\\obj\\Debug\\Dutch VACC - ATIS Generator.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_280F82233AB947DFB0A4981485B28DAA"

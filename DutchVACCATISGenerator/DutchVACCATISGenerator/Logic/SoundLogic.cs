@@ -136,34 +136,36 @@ namespace DutchVACCATISGenerator.Logic
             await Task.Run(() =>
              {
                  ApplicationEvents.BuildAITSStarted();
-
-                 if (new FileInfo($"{Path.GetDirectoryName(atisFile)}\\atis.wav").IsLocked())
-                     throw new IOException("Cannot generate new atis.wav file. File does not exist or is in use by another process.");
+                 var info = new FileInfo($"{Path.GetDirectoryName(atisFile)}\\atis.wav");
+                 if (info.Exists && info.IsLocked())
+                 {
+                     throw new IOException("Cannot generate new atis.wav file. File is in use by another process.");
+                 }
 
                  int i = 0;
 
                  WaveFileWriter waveFileWriter = null;
 
-                 //Try to generate and build atis.wav.
                  try
                  {
                      foreach (string sample in ATISSamples)
                      {
-                         //Open WaveFileReader to write to atis.wav.
                          try
                          {
                              //Using the WaveFileReader, get the file to write to the atis.wave from the records list.
                              using (WaveFileReader reader = new WaveFileReader($"{Path.GetDirectoryName(atisFile)}\\samples\\{records[sample]}"))
                              {
-                                 //Initialize new WaveFileWriter.
                                  if (waveFileWriter == null)
+                                 {
                                      waveFileWriter = new WaveFileWriter($"{Path.GetDirectoryName(atisFile)}\\atis.wav", reader.WaveFormat);
-
+                                 }
                                  else
                                  {
                                      //If loaded .wav does not watch the format of the atis.wav output file.
                                      if (!reader.WaveFormat.Equals(waveFileWriter.WaveFormat))
+                                     {
                                          throw new InvalidOperationException("Can't concatenate .wav files that don't share the same format");
+                                     }
                                  }
 
                                  var buffer = new byte[1024];
@@ -193,12 +195,10 @@ namespace DutchVACCATISGenerator.Logic
                  }
                  finally
                  {
-                     //Dispose waveFileWriter when finished.
                      if (waveFileWriter != null)
                          waveFileWriter.Dispose();
                  }
 
-                 //Raise event.
                  ApplicationEvents.BuildAITSCompleted();
              });
         }
