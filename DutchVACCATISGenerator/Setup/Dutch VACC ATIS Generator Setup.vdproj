@@ -1036,7 +1036,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:v4.6.1  "
+                "FrameworkVersion" = "8:v4.6.1   "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=671728"
                 }
@@ -4170,15 +4170,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Dutch VACC ATIS Generator"
-        "ProductCode" = "8:{287D5F6E-8CA3-472E-9C16-3B3523C1EF4D}"
-        "PackageCode" = "8:{7DF9CFE5-45B6-448F-968F-006BA9F8BB5E}"
+        "ProductCode" = "8:{1F1DAADD-8AD4-4247-BE7E-A1E51B1DA108}"
+        "PackageCode" = "8:{D9FA1336-9AD3-401C-BB0A-845704C6DBEF}"
         "UpgradeCode" = "8:{C1B78CCE-F38E-4A8A-A919-DC8915EBB958}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:2.1.2"
+        "ProductVersion" = "8:2.1.3"
         "Manufacturer" = "8:Dutch VACC"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -4720,7 +4720,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E3B6109CFAA0430DB16E477A892CED91"
             {
-            "SourcePath" = "8:..\\DutchVACCATISGenerator\\obj\\Debug\\Dutch VACC - ATIS Generator.exe"
+            "SourcePath" = "8:..\\DutchVACCATISGenerator\\obj\\Release\\Dutch VACC - ATIS Generator.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_280F82233AB947DFB0A4981485B28DAA"
