@@ -11,7 +11,7 @@ namespace DutchVACCATISGenerator.Types
     {
         public const string UpdateBaseURL = @"https://cdn.dutchvacc.nl/atis/";
         public static readonly string ehamSamplesFile = Path.Combine(Application.StartupPath, @"Samples/ehamsamples.txt");
-        public static readonly string EhamAtisWavFile = Path.Combine(Application.StartupPath, @"atis.wav");
+        public static readonly string EhamAtisWavFile = Path.Combine(Path.GetTempPath(), @"atis.wav");
         public static readonly string SamplesFolder = Path.Combine(Application.StartupPath, @"Samples");
 
 

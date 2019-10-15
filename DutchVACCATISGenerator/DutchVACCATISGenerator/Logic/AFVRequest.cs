@@ -21,7 +21,7 @@ namespace DutchVACCATISGenerator.Logic
         public void Send()
         {
             var info = new FileInfo(FileName);
-            if (info.Exists)
+            if (!info.Exists)
             {
                 throw new IOException($"Cannot send ATIS file. file {FileName} was not found.");
             }
