@@ -61,7 +61,6 @@
             this.fetchMETARLabel = new System.Windows.Forms.Label();
             this.selectBestRunwayButton = new System.Windows.Forms.Button();
             this.copyOutputCheckBox = new System.Windows.Forms.CheckBox();
-            this.outputOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.outputGroupBox = new System.Windows.Forms.GroupBox();
             this.outputTextBox = new System.Windows.Forms.TextBox();
             this.ICAOTabControl = new System.Windows.Forms.TabControl();
@@ -121,6 +120,7 @@
             this.soundButton = new System.Windows.Forms.Button();
             this.fetchMETARTimer = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.btnSendToVatsim = new System.Windows.Forms.Button();
             this.atisIndexGroupBox.SuspendLayout();
             this.EHAMmainRunwaysGroupBox.SuspendLayout();
             this.EHAMmainLandingRunwayGroupBox.SuspendLayout();
@@ -130,7 +130,6 @@
             this.EHAMsecondaryDepartureRunwayGroupBox.SuspendLayout();
             this.tlLevelGroupBox.SuspendLayout();
             this.metarInputGroupBox.SuspendLayout();
-            this.outputOptionsGroupBox.SuspendLayout();
             this.outputGroupBox.SuspendLayout();
             this.ICAOTabControl.SuspendLayout();
             this.EHAM.SuspendLayout();
@@ -517,22 +516,12 @@
             this.copyOutputCheckBox.AutoSize = true;
             this.copyOutputCheckBox.Checked = true;
             this.copyOutputCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.copyOutputCheckBox.Location = new System.Drawing.Point(6, 19);
+            this.copyOutputCheckBox.Location = new System.Drawing.Point(5, 151);
             this.copyOutputCheckBox.Name = "copyOutputCheckBox";
             this.copyOutputCheckBox.Size = new System.Drawing.Size(141, 17);
             this.copyOutputCheckBox.TabIndex = 20;
             this.copyOutputCheckBox.Text = "Copy output to clipboard";
             this.copyOutputCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // outputOptionsGroupBox
-            // 
-            this.outputOptionsGroupBox.Controls.Add(this.copyOutputCheckBox);
-            this.outputOptionsGroupBox.Location = new System.Drawing.Point(373, 406);
-            this.outputOptionsGroupBox.Name = "outputOptionsGroupBox";
-            this.outputOptionsGroupBox.Size = new System.Drawing.Size(175, 112);
-            this.outputOptionsGroupBox.TabIndex = 0;
-            this.outputOptionsGroupBox.TabStop = false;
-            this.outputOptionsGroupBox.Text = "Output Options";
             // 
             // outputGroupBox
             // 
@@ -1002,6 +991,7 @@
             // 
             // additionalOptionsGroupBox
             // 
+            this.additionalOptionsGroupBox.Controls.Add(this.copyOutputCheckBox);
             this.additionalOptionsGroupBox.Controls.Add(this.userDefinedExtraCheckBox);
             this.additionalOptionsGroupBox.Controls.Add(this.markTempCheckBox);
             this.additionalOptionsGroupBox.Controls.Add(this.approachAndArrivalCheckBox);
@@ -1097,17 +1087,28 @@
             // 
             this.openFileDialog.FileName = "openFileDialog";
             // 
+            // btnSendToVatsim
+            // 
+            this.btnSendToVatsim.Enabled = false;
+            this.btnSendToVatsim.Location = new System.Drawing.Point(373, 411);
+            this.btnSendToVatsim.Name = "btnSendToVatsim";
+            this.btnSendToVatsim.Size = new System.Drawing.Size(172, 107);
+            this.btnSendToVatsim.TabIndex = 25;
+            this.btnSendToVatsim.Text = "SEND TO VATSIM";
+            this.btnSendToVatsim.UseVisualStyleBackColor = true;
+            this.btnSendToVatsim.Click += new System.EventHandler(this.BtnSendToVatsim_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 654);
+            this.Controls.Add(this.btnSendToVatsim);
             this.Controls.Add(this.soundButton);
             this.Controls.Add(this.runwayInfoButton);
             this.Controls.Add(this.additionalOptionsGroupBox);
             this.Controls.Add(this.ICAOTabControl);
             this.Controls.Add(this.outputGroupBox);
-            this.Controls.Add(this.outputOptionsGroupBox);
             this.Controls.Add(this.metarInputGroupBox);
             this.Controls.Add(this.generateATISButton);
             this.Controls.Add(this.tlLevelGroupBox);
@@ -1136,8 +1137,6 @@
             this.tlLevelGroupBox.ResumeLayout(false);
             this.metarInputGroupBox.ResumeLayout(false);
             this.metarInputGroupBox.PerformLayout();
-            this.outputOptionsGroupBox.ResumeLayout(false);
-            this.outputOptionsGroupBox.PerformLayout();
             this.outputGroupBox.ResumeLayout(false);
             this.outputGroupBox.PerformLayout();
             this.ICAOTabControl.ResumeLayout(false);
@@ -1196,7 +1195,6 @@
         private System.Windows.Forms.Label tlOutLabel;
         private System.Windows.Forms.GroupBox metarInputGroupBox;
         private System.Windows.Forms.CheckBox copyOutputCheckBox;
-        private System.Windows.Forms.GroupBox outputOptionsGroupBox;
         private System.Windows.Forms.GroupBox outputGroupBox;
         private System.Windows.Forms.TabPage EHBK;
         private System.Windows.Forms.TabPage EHEH;
@@ -1260,6 +1258,7 @@
         private System.Windows.Forms.ToolStripSeparator seperatorEHRDToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.Button btnSendToVatsim;
     }
 }
 

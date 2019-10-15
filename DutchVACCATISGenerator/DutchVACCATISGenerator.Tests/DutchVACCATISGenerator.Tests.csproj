@@ -82,7 +82,6 @@
     <Compile Include="Logic\FileLogicTests.cs" />
     <Compile Include="Logic\METARLogicTests.cs" />
     <Compile Include="Logic\RunwayLogicTests.cs" />
-    <Compile Include="Logic\SoundLogicTests.cs" />
     <Compile Include="Logic\TerminalAerodromeForecastLogicTests.cs" />
     <Compile Include="Logic\VersionLogicTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

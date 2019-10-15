@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Media;
 using System.Reflection;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DutchVACCATISGenerator.Forms
@@ -152,6 +153,7 @@ namespace DutchVACCATISGenerator.Forms
                 generateATISButton.Enabled = false;
 
                 soundLogic.Build(applicationVariables.ATISSamples);
+                btnSendToVatsim.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -1063,6 +1065,12 @@ namespace DutchVACCATISGenerator.Forms
         private void SetWindowBounds()
         {
             applicationVariables.MainFormBounds = this.Bounds;
+        }
+
+        private void BtnSendToVatsim_Click(object sender, EventArgs e)
+        {
+            btnSendToVatsim.Enabled = false;
+            new AFVRequest(ApplicationVariables.EhamAtisWavFile, outputTextBox.Text).Send();
         }
     }
 }
