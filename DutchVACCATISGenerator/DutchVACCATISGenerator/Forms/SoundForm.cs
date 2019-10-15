@@ -33,24 +33,9 @@ namespace DutchVACCATISGenerator.Forms
             //Enable the build ATIS button if the ATIS has already been generated.
             if (applicationVariables.ATISSamples.Any())
                 buildATISButton.Enabled = true;
-
-            //Get and set the property of the path to the ATIS folder if it has been saved before. 
-            //Else sets the path to the user document folder + \EuroScope\atis\atiseham.txt.
-            if (!string.IsNullOrWhiteSpace(Properties.Settings.Default.atisfile))
-                ATISFileTextBox.Text = Properties.Settings.Default.atisfile;
-            else
-                ATISFileTextBox.Text = $@"{Environment.GetFolderPath(Environment.SpecialFolder.Personal)}\EuroScope\atis\atiseham.txt";
         }
 
         #region UI events
-        private void BrowseButton_Click(object sender, EventArgs e)
-        {
-            //If user has selected a file.
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                SetATISFileTextBoxAndProperty();
-            }
-        }
 
         private void Sound_Load(object sender, EventArgs e)
         {
@@ -64,7 +49,7 @@ namespace DutchVACCATISGenerator.Forms
             buildATISButton.Enabled = false;
             playATISButton.Enabled = false;
 
-            soundLogic.Build(ATISFileTextBox.Text, applicationVariables.ATISSamples);
+            soundLogic.Build(applicationVariables.ATISSamples);
         }
 
         private void BuildAITSCompleted(object sender, EventArgs e)
@@ -103,20 +88,17 @@ namespace DutchVACCATISGenerator.Forms
 
         private void PlayATISButton_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(ATISFileTextBox.Text) && !ShowNoATISFileSelectedWarning())
-                return;
-
             buildATISButton.Enabled = false;
 
             playATISButton.Text = "Stop ATIS";
 
             try
             {
-                soundLogic.Play(ATISFileTextBox.Text);
+                soundLogic.Play(ApplicationVariables.EhamAtisWavFile);
             }
             catch (FileNotFoundException ex)
             {
-                MessageBox.Show(String.Format("Unable to play ATIS. Check if the atiseham.txt file is in the same folder as the ATIS sounds (atis.wav, etc.).\n\nError: {0}", ex.Message), "Error");
+                MessageBox.Show(String.Format("Unable to play ATIS. \n\nError: {0}", ex.Message), "Error");
 
                 buildATISButton.Enabled = true;
             }
@@ -130,31 +112,5 @@ namespace DutchVACCATISGenerator.Forms
             buildATISButton.Enabled = true;
         }
         #endregion
-
-        private bool ShowNoATISFileSelectedWarning()
-        {
-            MessageBox.Show("No path to atiseham.txt provided.", "Warning");
-
-            //Open file dialog for user to set the path to atiseham.txt.
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                SetATISFileTextBoxAndProperty();
-
-                return true;
-            }
-            //User didn't selected a file.
-            else
-                return false;
-        }
-
-        private void SetATISFileTextBoxAndProperty()
-        {
-            //Set properties.
-            ATISFileTextBox.Text =
-                Properties.Settings.Default.atisfile = openFileDialog.FileName;
-
-            //Save setting.
-            Properties.Settings.Default.Save();
-        }
     }
 }

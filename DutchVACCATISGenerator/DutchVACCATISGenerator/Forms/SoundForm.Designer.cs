@@ -30,15 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SoundForm));
             this.playATISButton = new System.Windows.Forms.Button();
-            this.ATISFileTextBox = new System.Windows.Forms.TextBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.browseButton = new System.Windows.Forms.Button();
-            this.ATISFileGroupBox = new System.Windows.Forms.GroupBox();
             this.buildATISButton = new System.Windows.Forms.Button();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.buildGroupBox = new System.Windows.Forms.GroupBox();
             this.playGroupBox = new System.Windows.Forms.GroupBox();
-            this.ATISFileGroupBox.SuspendLayout();
             this.buildGroupBox.SuspendLayout();
             this.playGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -53,38 +49,10 @@
             this.playATISButton.UseVisualStyleBackColor = true;
             this.playATISButton.Click += new System.EventHandler(this.PlayATISButton_Click);
             // 
-            // ATISFileTextBox
-            // 
-            this.ATISFileTextBox.Location = new System.Drawing.Point(6, 19);
-            this.ATISFileTextBox.Multiline = true;
-            this.ATISFileTextBox.Name = "ATISFileTextBox";
-            this.ATISFileTextBox.Size = new System.Drawing.Size(444, 23);
-            this.ATISFileTextBox.TabIndex = 1;
-            // 
             // openFileDialog
             // 
             this.openFileDialog.FileName = "atiseham.txt";
             this.openFileDialog.Filter = "Text Documents|*.txt";
-            // 
-            // browseButton
-            // 
-            this.browseButton.Location = new System.Drawing.Point(456, 18);
-            this.browseButton.Name = "browseButton";
-            this.browseButton.Size = new System.Drawing.Size(75, 25);
-            this.browseButton.TabIndex = 2;
-            this.browseButton.Text = "Browse...";
-            this.browseButton.UseVisualStyleBackColor = true;
-            this.browseButton.Click += new System.EventHandler(this.BrowseButton_Click);
-            // 
-            // ATISFileGroupBox
-            // 
-            this.ATISFileGroupBox.Controls.Add(this.ATISFileTextBox);
-            this.ATISFileGroupBox.Controls.Add(this.browseButton);
-            this.ATISFileGroupBox.Location = new System.Drawing.Point(12, 6);
-            this.ATISFileGroupBox.Name = "ATISFileGroupBox";
-            this.ATISFileGroupBox.Size = new System.Drawing.Size(537, 55);
-            this.ATISFileGroupBox.TabIndex = 3;
-            this.ATISFileGroupBox.TabStop = false;
             // 
             // buildATISButton
             // 
@@ -108,7 +76,7 @@
             // 
             this.buildGroupBox.Controls.Add(this.buildATISButton);
             this.buildGroupBox.Controls.Add(this.progressBar);
-            this.buildGroupBox.Location = new System.Drawing.Point(12, 67);
+            this.buildGroupBox.Location = new System.Drawing.Point(12, 12);
             this.buildGroupBox.Name = "buildGroupBox";
             this.buildGroupBox.Size = new System.Drawing.Size(415, 66);
             this.buildGroupBox.TabIndex = 6;
@@ -117,7 +85,7 @@
             // playGroupBox
             // 
             this.playGroupBox.Controls.Add(this.playATISButton);
-            this.playGroupBox.Location = new System.Drawing.Point(433, 67);
+            this.playGroupBox.Location = new System.Drawing.Point(433, 12);
             this.playGroupBox.Name = "playGroupBox";
             this.playGroupBox.Size = new System.Drawing.Size(116, 66);
             this.playGroupBox.TabIndex = 7;
@@ -127,10 +95,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 145);
+            this.ClientSize = new System.Drawing.Size(561, 85);
             this.Controls.Add(this.playGroupBox);
             this.Controls.Add(this.buildGroupBox);
-            this.Controls.Add(this.ATISFileGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -140,8 +107,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Sound";
             this.Load += new System.EventHandler(this.Sound_Load);
-            this.ATISFileGroupBox.ResumeLayout(false);
-            this.ATISFileGroupBox.PerformLayout();
             this.buildGroupBox.ResumeLayout(false);
             this.playGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -151,10 +116,7 @@
         #endregion
 
         private System.Windows.Forms.Button playATISButton;
-        private System.Windows.Forms.TextBox ATISFileTextBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.Button browseButton;
-        private System.Windows.Forms.GroupBox ATISFileGroupBox;
         private System.Windows.Forms.ProgressBar progressBar;
         public System.Windows.Forms.Button buildATISButton;
         private System.Windows.Forms.GroupBox buildGroupBox;

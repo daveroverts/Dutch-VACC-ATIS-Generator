@@ -237,6 +237,570 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\Installer\Files\Samples\eham1_0.wav">
+      <Link>Samples\eham1_0.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_1.wav">
+      <Link>Samples\eham1_1.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_1st_part.wav">
+      <Link>Samples\eham1_1st_part.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_2.wav">
+      <Link>Samples\eham1_2.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_2nd_part.wav">
+      <Link>Samples\eham1_2nd_part.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_3.wav">
+      <Link>Samples\eham1_3.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_3rd_part.wav">
+      <Link>Samples\eham1_3rd_part.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_4.wav">
+      <Link>Samples\eham1_4.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_5.wav">
+      <Link>Samples\eham1_5.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_6.wav">
+      <Link>Samples\eham1_6.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_7.wav">
+      <Link>Samples\eham1_7.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_8.wav">
+      <Link>Samples\eham1_8.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_9.wav">
+      <Link>Samples\eham1_9.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_9_flat.wav">
+      <Link>Samples\eham1_9_flat.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_a.wav">
+      <Link>Samples\eham1_a.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_and.wav">
+      <Link>Samples\eham1_and.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_b.wav">
+      <Link>Samples\eham1_b.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_bc.wav">
+      <Link>Samples\eham1_bc.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_becoming.wav">
+      <Link>Samples\eham1_becoming.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_brakingaction.wav">
+      <Link>Samples\eham1_brakingaction.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_broken.wav">
+      <Link>Samples\eham1_broken.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_c.wav">
+      <Link>Samples\eham1_c.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_callonly1.wav">
+      <Link>Samples\eham1_callonly1.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_callonly2.wav">
+      <Link>Samples\eham1_callonly2.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_callonly3.wav">
+      <Link>Samples\eham1_callonly3.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_cavok.wav">
+      <Link>Samples\eham1_cavok.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_center.wav">
+      <Link>Samples\eham1_center.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_converging.wav">
+      <Link>Samples\eham1_converging.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_cumulonimbus.wav">
+      <Link>Samples\eham1_cumulonimbus.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_d.wav">
+      <Link>Samples\eham1_d.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_damp.wav">
+      <Link>Samples\eham1_damp.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_degrees.wav">
+      <Link>Samples\eham1_degrees.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_dewp.wav">
+      <Link>Samples\eham1_dewp.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_dme.wav">
+      <Link>Samples\eham1_dme.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_drizzle.wav">
+      <Link>Samples\eham1_drizzle.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_e.wav">
+      <Link>Samples\eham1_e.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_ehamarratis.wav">
+      <Link>Samples\eham1_ehamarratis.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_ehamatis.wav">
+      <Link>Samples\eham1_ehamatis.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_ehamdepatis.wav">
+      <Link>Samples\eham1_ehamdepatis.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_ehbkatis.wav">
+      <Link>Samples\eham1_ehbkatis.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_ehehatis.wav">
+      <Link>Samples\eham1_ehehatis.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_ehggatis.wav">
+      <Link>Samples\eham1_ehggatis.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_ehrdatis.wav">
+      <Link>Samples\eham1_ehrdatis.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_endofinfo.wav">
+      <Link>Samples\eham1_endofinfo.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_f.wav">
+      <Link>Samples\eham1_f.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_feet.wav">
+      <Link>Samples\eham1_feet.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_few.wav">
+      <Link>Samples\eham1_few.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_fog.wav">
+      <Link>Samples\eham1_fog.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_fogpatches.wav">
+      <Link>Samples\eham1_fogpatches.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_freezing.wav">
+      <Link>Samples\eham1_freezing.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_g.wav">
+      <Link>Samples\eham1_g.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_good.wav">
+      <Link>Samples\eham1_good.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_gr.wav">
+      <Link>Samples\eham1_gr.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_h.wav">
+      <Link>Samples\eham1_h.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_hail.wav">
+      <Link>Samples\eham1_hail.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_haze.wav">
+      <Link>Samples\eham1_haze.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_hp.wav">
+      <Link>Samples\eham1_hp.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_hundred.wav">
+      <Link>Samples\eham1_hundred.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_i.wav">
+      <Link>Samples\eham1_i.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_independent.wav">
+      <Link>Samples\eham1_independent.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_j.wav">
+      <Link>Samples\eham1_j.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_k.wav">
+      <Link>Samples\eham1_k.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_kilometers.wav">
+      <Link>Samples\eham1_kilometers.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_knots.wav">
+      <Link>Samples\eham1_knots.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_l.wav">
+      <Link>Samples\eham1_l.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_left.wav">
+      <Link>Samples\eham1_left.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_lessthan.wav">
+      <Link>Samples\eham1_lessthan.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_light.wav">
+      <Link>Samples\eham1_light.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_lowqnh.wav">
+      <Link>Samples\eham1_lowqnh.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_lowvis.wav">
+      <Link>Samples\eham1_lowvis.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_m.wav">
+      <Link>Samples\eham1_m.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_marktemperature.wav">
+      <Link>Samples\eham1_marktemperature.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_maximum.wav">
+      <Link>Samples\eham1_maximum.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_medium.wav">
+      <Link>Samples\eham1_medium.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_meters.wav">
+      <Link>Samples\eham1_meters.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_mifg.wav">
+      <Link>Samples\eham1_mifg.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_minimum.wav">
+      <Link>Samples\eham1_minimum.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_minus.wav">
+      <Link>Samples\eham1_minus.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_mist.wav">
+      <Link>Samples\eham1_mist.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_mlr.wav">
+      <Link>Samples\eham1_mlr.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_mr.wav">
+      <Link>Samples\eham1_mr.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_mtr.wav">
+      <Link>Samples\eham1_mtr.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_n.wav">
+      <Link>Samples\eham1_n.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_na.wav">
+      <Link>Samples\eham1_na.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_nosig.wav">
+      <Link>Samples\eham1_nosig.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_nsc.wav">
+      <Link>Samples\eham1_nsc.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_nsw.wav">
+      <Link>Samples\eham1_nsw.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_o.wav">
+      <Link>Samples\eham1_o.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_opr.wav">
+      <Link>Samples\eham1_opr.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_overcast.wav">
+      <Link>Samples\eham1_overcast.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_p.wav">
+      <Link>Samples\eham1_p.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_pause.wav">
+      <Link>Samples\eham1_pause.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_percent.wav">
+      <Link>Samples\eham1_percent.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_q.wav">
+      <Link>Samples\eham1_q.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_qnh.wav">
+      <Link>Samples\eham1_qnh.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_r.wav">
+      <Link>Samples\eham1_r.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_rain.wav">
+      <Link>Samples\eham1_rain.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_right.wav">
+      <Link>Samples\eham1_right.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_rimeorfrost.wav">
+      <Link>Samples\eham1_rimeorfrost.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_runway.wav">
+      <Link>Samples\eham1_runway.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_runwayconditions.wav">
+      <Link>Samples\eham1_runwayconditions.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_rvronatc.wav">
+      <Link>Samples\eham1_rvronatc.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_s.wav">
+      <Link>Samples\eham1_s.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_scattered.wav">
+      <Link>Samples\eham1_scattered.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_shallow.wav">
+      <Link>Samples\eham1_shallow.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_showers.wav">
+      <Link>Samples\eham1_showers.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_showersofrain.wav">
+      <Link>Samples\eham1_showersofrain.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_skyclear.wav">
+      <Link>Samples\eham1_skyclear.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_slr.wav">
+      <Link>Samples\eham1_slr.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_snow.wav">
+      <Link>Samples\eham1_snow.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_snowgrains.wav">
+      <Link>Samples\eham1_snowgrains.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_softhail.wav">
+      <Link>Samples\eham1_softhail.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_str.wav">
+      <Link>Samples\eham1_str.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_t.wav">
+      <Link>Samples\eham1_t.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_talt.wav">
+      <Link>Samples\eham1_talt.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_taxiwaysandaprons.wav">
+      <Link>Samples\eham1_taxiwaysandaprons.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_tcu.wav">
+      <Link>Samples\eham1_tcu.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_temp.wav">
+      <Link>Samples\eham1_temp.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_tempo.wav">
+      <Link>Samples\eham1_tempo.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_thousand.wav">
+      <Link>Samples\eham1_thousand.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_thunderstorms.wav">
+      <Link>Samples\eham1_thunderstorms.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_tl.wav">
+      <Link>Samples\eham1_tl.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_to.wav">
+      <Link>Samples\eham1_to.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_u.wav">
+      <Link>Samples\eham1_u.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_v.wav">
+      <Link>Samples\eham1_v.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_varbetween.wav">
+      <Link>Samples\eham1_varbetween.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_variable.wav">
+      <Link>Samples\eham1_variable.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_vcsh.wav">
+      <Link>Samples\eham1_vcsh.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_vcts.wav">
+      <Link>Samples\eham1_vcts.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_vis.wav">
+      <Link>Samples\eham1_vis.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_vor.wav">
+      <Link>Samples\eham1_vor.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_vvis.wav">
+      <Link>Samples\eham1_vvis.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_w.wav">
+      <Link>Samples\eham1_w.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_weather.wav">
+      <Link>Samples\eham1_weather.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_wind.wav">
+      <Link>Samples\eham1_wind.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_x.wav">
+      <Link>Samples\eham1_x.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_y.wav">
+      <Link>Samples\eham1_y.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\eham1_z.wav">
+      <Link>Samples\eham1_z.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\ehamsamples.txt">
+      <Link>Samples\ehamsamples.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\extra 2+2 baangebruik.wav">
+      <Link>Samples\extra 2+2 baangebruik.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Installer\Files\Samples\extra.wav">
+      <Link>Samples\extra.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="favicon.ico" />
   </ItemGroup>
   <ItemGroup />

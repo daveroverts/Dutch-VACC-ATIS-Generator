@@ -17,7 +17,7 @@ namespace DutchVACCATISGenerator.Logic
         /// </summary>
         /// <param name="atisFile">Path to ATIS descriptor file</param>
         /// /// <param name="ATISSamples">List of ATIS samples</param>
-        Task Build(string atisFile, List<string> ATISSamples);
+        Task Build(List<string> ATISSamples);
 
         /// <summary>
         /// Plays or stops the ATIS.
@@ -38,13 +38,9 @@ namespace DutchVACCATISGenerator.Logic
 
         private bool disposed = false;
 
-        public Task Build(string atisFile, List<string> ATISSamples)
+        public Task Build(List<string> ATISSamples)
         {
-            if (string.IsNullOrWhiteSpace(atisFile) || !File.Exists(atisFile))
-                throw new FileNotFoundException(atisFile);
-
-            ///Start build asynchronous.
-            return BuildAsync(atisFile, ATISSamples, GetRecords(atisFile));
+            return BuildAsync(ATISSamples, GetRecords());
         }
 
         public void Play(string atisFile)
@@ -59,7 +55,7 @@ namespace DutchVACCATISGenerator.Logic
             //Try to read atis.wav file.
             try
             {
-                audioFileReader = new AudioFileReader(Path.GetDirectoryName(atisFile) + "\\atis.wav");
+                audioFileReader = new AudioFileReader(atisFile);
             }
             catch (FileNotFoundException)
             {
@@ -92,9 +88,9 @@ namespace DutchVACCATISGenerator.Logic
             audioFileReader = null;
         }
 
-        private Dictionary<string, string> GetRecords(string atisFile)
+        private Dictionary<string, string> GetRecords()
         {
-            var text = File.ReadAllText($"{Path.GetDirectoryName(atisFile)}\\samples\\ehamsamples.txt");
+            var text = File.ReadAllText(ApplicationVariables.ehamSamplesFile);
 
             var lines = SplitOnAndRemoveEmptyLines(text);
 
@@ -131,12 +127,12 @@ namespace DutchVACCATISGenerator.Logic
             return linesWithItem;
         }
 
-        private async Task BuildAsync(string atisFile, List<string> ATISSamples, Dictionary<string, string> records)
+        private async Task BuildAsync(List<string> ATISSamples, Dictionary<string, string> records)
         {
             await Task.Run(() =>
              {
                  ApplicationEvents.BuildAITSStarted();
-                 var info = new FileInfo($"{Path.GetDirectoryName(atisFile)}\\atis.wav");
+                 var info = new FileInfo(ApplicationVariables.EhamAtisWavFile);
                  if (info.Exists && info.IsLocked())
                  {
                      throw new IOException("Cannot generate new atis.wav file. File is in use by another process.");
@@ -153,11 +149,11 @@ namespace DutchVACCATISGenerator.Logic
                          try
                          {
                              //Using the WaveFileReader, get the file to write to the atis.wave from the records list.
-                             using (WaveFileReader reader = new WaveFileReader($"{Path.GetDirectoryName(atisFile)}\\samples\\{records[sample]}"))
+                             using (WaveFileReader reader = new WaveFileReader(Path.Combine(ApplicationVariables.SamplesFolder, records[sample])))
                              {
                                  if (waveFileWriter == null)
                                  {
-                                     waveFileWriter = new WaveFileWriter($"{Path.GetDirectoryName(atisFile)}\\atis.wav", reader.WaveFormat);
+                                     waveFileWriter = new WaveFileWriter(ApplicationVariables.EhamAtisWavFile, reader.WaveFormat);
                                  }
                                  else
                                  {

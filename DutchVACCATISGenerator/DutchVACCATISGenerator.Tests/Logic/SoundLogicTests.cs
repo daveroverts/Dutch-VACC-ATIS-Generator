@@ -43,7 +43,7 @@ namespace DutchVACCATISGenerator.Test.Logic
 
             //Act
             var output = ATISLogic.Generate(METAR, "18R", "24", true, true, "18C", "18L", "24", true, false, false, true, false);
-            soundLogic.Build(ATISEHAM, applicationVariables.ATISSamples).Wait();
+            soundLogic.Build(applicationVariables.ATISSamples).Wait();
 
             //Assert
             Assert.IsNotNull(output);
@@ -69,7 +69,7 @@ namespace DutchVACCATISGenerator.Test.Logic
             {
                 ATISLogic.SetPhoneticAlphabet(false, false, true, false);
                 ATISBuilds.Add(ATISLogic.Generate(new METAR(METAR), "18R", "24", true, true, "18C", "18L", "24", true, false, false, true, false));
-                soundLogic.Build(ATISEHAM, applicationVariables.ATISSamples).Wait();
+                soundLogic.Build(applicationVariables.ATISSamples).Wait();
             }
 
             //Assert
@@ -96,7 +96,7 @@ namespace DutchVACCATISGenerator.Test.Logic
             {
                 ATISLogic.SetPhoneticAlphabet(false, false, true, false);
                 ATISBuilds.Add(ATISLogic.Generate(new METAR(METAR), "18R", "24", true, true, "18C", "18L", "24", true, false, false, true, false));
-                soundLogic.Build(ATISEHAM, applicationVariables.ATISSamples).Wait();
+                soundLogic.Build(applicationVariables.ATISSamples).Wait();
             }
 
             //Assert
@@ -123,7 +123,7 @@ namespace DutchVACCATISGenerator.Test.Logic
             {
                 ATISLogic.SetPhoneticAlphabet(false, false, true, false);
                 ATISBuilds.Add(ATISLogic.Generate(new METAR(METAR), "18R", "24", true, true, "18C", "18L", "24", true, false, false, true, false));
-                soundLogic.Build(ATISEHAM, applicationVariables.ATISSamples).Wait();
+                soundLogic.Build(applicationVariables.ATISSamples).Wait();
             }
 
             //Assert
@@ -202,14 +202,6 @@ namespace DutchVACCATISGenerator.Test.Logic
             //Assert
             Assert.IsTrue(playbackStopped);
             Assert.IsFalse(playbackStarted);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(FileNotFoundException))]
-        public void Build_NonExisitingFile_ThrowsException()
-        {
-            //Act
-            soundLogic.Build("NonExisitingPath", new List<string>());
         }
     }
 }

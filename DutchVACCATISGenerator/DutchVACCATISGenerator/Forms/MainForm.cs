@@ -77,12 +77,6 @@ namespace DutchVACCATISGenerator.Forms
             //If auto load EHAM runways is selected.
             if (autoLoadEHAMRunwayToolStripMenuItem.Checked)
                 runwayLogic.SchipholRunways();
-
-            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.atisfile))
-            {
-                Properties.Settings.Default.atisfile = $@"{Environment.GetFolderPath(Environment.SpecialFolder.Personal)}\EuroScope\atis\atiseham.txt";
-                Properties.Settings.Default.Save();
-            }
         }
 
         #region UI events
@@ -152,34 +146,18 @@ namespace DutchVACCATISGenerator.Forms
             //Set generated ATIS output in output text box.
             outputTextBox.Text = output;
 
-            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.atisfile))
-            {
-                MessageBox.Show("No path to atiseham.txt provided.", "Warning");
-
-                SelectATISehamtxt();
-            }
-
             //Build ATIS file.
             try
             {
                 generateATISButton.Enabled = false;
 
-                soundLogic.Build(Properties.Settings.Default.atisfile, applicationVariables.ATISSamples);
+                soundLogic.Build(applicationVariables.ATISSamples);
             }
             catch (Exception ex)
             {
                 generateATISButton.Enabled = true;
 
                 MessageBox.Show($"Unable to build ATIS.\n\nError: {ex.Message}", "Error");
-            }
-        }
-
-        private void SelectATISehamtxt()
-        {
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                Properties.Settings.Default.atisfile = openFileDialog.FileName;
-                Properties.Settings.Default.Save();
             }
         }
 
@@ -1085,11 +1063,6 @@ namespace DutchVACCATISGenerator.Forms
         private void SetWindowBounds()
         {
             applicationVariables.MainFormBounds = this.Bounds;
-        }
-
-        private void SelectAtisehamtxtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SelectATISehamtxt();
         }
     }
 }
